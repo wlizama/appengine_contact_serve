@@ -26,7 +26,11 @@ def add_contact():
 
     return render_template('add_contact.html')
 
+@app.route(r'/contact/<uid>', methods=["GET"])
+def contact_details(uid):
+  contact = Contact.get_by_id(int(uid))
 
+  return  render_template("contact.html", contact=contact)
 
 if __name__ == '__main__':
     app.run()
