@@ -8,4 +8,12 @@
   <p>
     <a href="/">Regresar</a>
   </p>
+
+  <hr>
+
+  <form action="/delete" method="post">
+    <input type="hidden" name="uid" value="{{contact.key.id()}}">
+
+    <button type="submit"> <b>❌</b> Eliminar Contacto</button>
+  </form>
 {% endblock %}
